@@ -1,0 +1,53 @@
+{
+    "name": "blogufy/crud",
+    "description": "An extension of blogufy core with CRUD implementation with two simple yet efficient frontend drop-in UI components: one for dashboard/admin pannel, and the other for the public site.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Py Sosu",
+            "email": "prospersosu@gmail.com"
+        }
+    ],
+    "require": {
+        "blogufy/core": "dev-main"
+    },
+
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Blogufy\\Crud\\": "src/",
+            "Blogufy\\Crud\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blogufy\\Crud\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blogufy\\Crud\\BlogufyCrudServiceProvider"
+            ]
+        }
+    },
+    
+    "minimum-stability": "dev",
+    
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../core"
+        }
+    ]
+}
