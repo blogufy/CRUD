@@ -10,12 +10,14 @@
         }
     ],
     "require": {
-        "blogufy/core": "dev-main"
+        "blogufy/core": "dev-main",
+        "livewire/livewire": "dev-master"
     },
 
     "require-dev": {
         "orchestra/testbench": "^7.0",
-        "phpunit/phpunit": "9.5.x-dev"
+        "phpunit/phpunit": "9.5.x-dev",
+        "orchestra/canvas": "7.x-dev"
     },
 
     "autoload": {
